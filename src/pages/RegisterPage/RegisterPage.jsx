@@ -1,5 +1,6 @@
 import css from "./RegisterPage.module.css";
 import logo from "../../assets/LogoMobile.svg";
+import iphoneImage from "../../assets/iPhone15Black1Png.png";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
 export default function RegisterPage() {
   return (
@@ -18,6 +19,14 @@ export default function RegisterPage() {
               Expand your mind, reading <span className={css.span}>a book</span>
             </h2>
             <RegisterForm />
+          </div>
+          <div className={css.regImageContainer}>
+            <img
+              src={iphoneImage}
+              alt="iphone15"
+              width={255}
+              className={css.iphoneImage}
+            />
           </div>
         </div>
       </section>

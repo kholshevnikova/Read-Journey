@@ -5,8 +5,33 @@ border-radius: 12px;
 background: #262626;
 border: none;
 }
+
 .formContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+.registerButton {
+    margin-top: 12px;
+    border-radius: 30px;
+    padding: 12px 29px;
+    width: 140px;
+    height: 42px;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: 0.02em;
+    color: #1f1f1f;
+}
+.link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #686868;
+    margin-top: 26px;
 }

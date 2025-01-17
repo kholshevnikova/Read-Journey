@@ -10,6 +10,7 @@
     border-radius: 30px;
     padding: 20px;
     background-color: #1f1f1f;
+    margin-bottom: 10px;
 
 }
 .logo {
@@ -27,4 +28,13 @@
 }
 .span {
     color: rgba(227, 227, 227, 0.5);
+}
+.regImageContainer {
+width: 255px;
+
+border-radius: 30px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #1f1f1f;
 }
