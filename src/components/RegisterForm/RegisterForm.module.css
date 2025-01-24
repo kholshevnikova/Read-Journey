@@ -1,15 +1,69 @@
 .input {
-width: 295px;
-height: 44px;
-border-radius: 12px;
-background: #262626;
-border: none;
+    width: 236px;
+    height: 44px;
+    border-radius: 12px;
+    background: #262626;
+    border: none;
+    padding-left: 59px;
+    padding-right: auto;
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 133%;
+    color: #f9f9f9;
+    outline: none;
+}
+.inputMail {
+    width: 246px;
+        height: 44px;
+        border-radius: 12px;
+        background: #262626;
+        border: none;
+        padding-left: 49px;
+        padding-right: auto;
+        font-family: var(--font-family);
+        font-size: 12px;
+        line-height: 133%;
+        color: #f9f9f9;
+        outline: none;
+}
+.inputPassword {
+width: 217px;
+    height: 44px;
+    border-radius: 12px;
+    background: #262626;
+    border: none;
+    padding-left: 78px;
+    padding-right: auto;
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 133%;
+    color: #f9f9f9;
+    outline: none;
 }
 
 .formContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+.inputContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    position: absolute;
+    top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        letter-spacing: -0.02em;
+        color: #686868;
+        transition: all 0.3s ease;
 }
 .registerButton {
     margin-top: 12px;
@@ -35,3 +89,59 @@ border: none;
     color: #686868;
     margin-top: 26px;
 }
+.placeholder {
+    font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #f9f9f9;
+}
+.input::placeholder {
+    color: #f9f9f9;
+    opacity: 0.6;
+}
+.inputMail::placeholder {
+    color: #f9f9f9;
+        opacity: 0.6;
+}
+.inputPassword::placeholder {
+color: #f9f9f9;
+    opacity: 0.6;
+}
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    top: 5px;
+    font-size: 10px;
+    color: #f9f9f9;
+}
+.inputMail:focus+.label,
+.inputMail:not(:placeholder-shown)+.label {
+    top: 5px;
+    font-size: 10px;
+    color: #f9f9f9;
+}
+.inputPassword:focus+.label,
+.inputPassword:not(:placeholder-shown)+.label {
+    top: 5px;
+    font-size: 10px;
+    color: #f9f9f9;
+}
+.eye {
+    color: #f9f9f9;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 16px;
+}
+.eyeContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+
