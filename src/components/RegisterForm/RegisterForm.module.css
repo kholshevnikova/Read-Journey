@@ -78,6 +78,7 @@ width: 217px;
     line-height: 129%;
     letter-spacing: 0.02em;
     color: #1f1f1f;
+    cursor: pointer;
 }
 .link {
     font-weight: 500;
@@ -142,6 +143,19 @@ color: #f9f9f9;
     align-items: center;
     justify-content: space-between;
     position: relative;
+}
+.error {
+    display: block;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #e90516;
+    padding-left: 14px;
+}
+.buttonContainer {
+    display: flex;
+    gap: 14px;
 }
 
 
