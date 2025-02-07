@@ -24,6 +24,8 @@ const signupSchema = Yup.object().shape({
 
 export default function RegisterForm() {
   const [show, setShow] = useState(false);
+
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
   const handleClick = () => {
     setShow(!show);
   };
@@ -36,9 +38,12 @@ export default function RegisterForm() {
           console.log("Form submitted with values:", values);
         }}
         validationSchema={signupSchema}
+        validateOnBlur={false}
+        validateOnChange={false}
       >
         {({ errors, touched, values }) => {
-          const isPasswordValid = !errors.password && values.password;
+          const isPasswordValid =
+            !errors.password && values.password.length >= 7;
           return (
             <Form className={css.formContainer}>
               <div className={css.inputContainer}>
@@ -102,21 +107,34 @@ export default function RegisterForm() {
                         : ""
                     }`}
                     placeholder="Yourpasswordhere"
+                    onFocus={() => setIsPasswordFocused(true)}
+                    onBlur={() => setIsPasswordFocused(false)}
                   />
-                  <span onClick={handleClick} className={css.eye}>
-                    {errors.password && touched.password ? (
+                  <span
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleClick();
+                    }}
+                    className={css.eye}
+                  >
+                    {isPasswordFocused ? (
+                      show ? (
+                        <HiOutlineEye />
+                      ) : (
+                        <HiOutlineEyeSlash />
+                      )
+                    ) : errors.password ? (
                       <MdErrorOutline color="red" />
                     ) : isPasswordValid ? (
                       <FaRegCircleCheck color="green" />
-                    ) : show ? (
-                      <HiOutlineEye />
                     ) : (
                       <HiOutlineEyeSlash />
                     )}
                   </span>
                 </div>
               </div>
-              {isPasswordValid ? (
+              {isPasswordValid && !isPasswordFocused ? (
                 <span className={css.successMessage}>Password is secure</span>
               ) : (
                 <ErrorMessage
