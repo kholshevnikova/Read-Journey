@@ -16,6 +16,20 @@
 .logo {
     margin-bottom: 40px;
 }
+.logoText {
+    font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #f9f9f9;
+        display: none;
+}
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 .formText {
     width: 295px;
     font-weight: 700;
@@ -37,4 +51,36 @@ border-radius: 30px;
     padding-left: 40px;
     padding-right: 40px;
     background-color: #1f1f1f;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+            width: 704px;
+            height: 960px;
+            padding: 32px;
+        }
+    .regFormContainer {
+             width: auto;
+             height: 960px;
+            padding-top: 40px;
+            padding-left: 64px;
+         }
+    .logoText {
+        display: inline-block;
+    }
+    .logo {
+        margin-bottom: 0px;
+    }
+    .logoContainer {
+        margin-bottom: 158px;
+    }
+    .formText {
+        width: 444px;
+        font-size: 64px;
+        line-height: 94%;
+        margin-bottom: 40px;
+    }
+    .regImageContainer {
+        display: none;
+    }
 }

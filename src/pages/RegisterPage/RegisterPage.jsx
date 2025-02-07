@@ -8,13 +8,17 @@ export default function RegisterPage() {
       <section className={css.regSection}>
         <div className={css.container}>
           <div className={css.regFormContainer}>
-            <img
-              src={logo}
-              alt="logo"
-              width={42}
-              height={17}
-              className={css.logo}
-            />
+            <div className={css.logoContainer}>
+              <img
+                src={logo}
+                alt="logo"
+                width={42}
+                height={17}
+                className={css.logo}
+              />
+              <span className={css.logoText}>READ JOURNEJ</span>
+            </div>
+
             <h2 className={css.formText}>
               Expand your mind, reading <span className={css.span}>a book</span>
             </h2>
